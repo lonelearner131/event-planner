@@ -1,0 +1,646 @@
+{
+  "wedding": {
+    "ideal_lead_days": 365,
+    "phases": {
+      "Foundations": [
+        {
+          "id": "w-f-01",
+          "title": "Set overall budget and priorities",
+          "offset_days_before": 360,
+          "priority": "critical",
+          "description": "Agree on total spend, top priorities, and decision-making process with all stakeholders.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "w-f-02",
+          "title": "Draft initial guest list",
+          "offset_days_before": 355,
+          "priority": "critical",
+          "description": "Create a preliminary guest list to guide venue capacity and catering quotes.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "w-f-03",
+          "title": "Choose and book ceremony & reception venue",
+          "offset_days_before": 330,
+          "priority": "critical",
+          "description": "Popular venues book 12–18 months out. Visit at least 3, check capacity, catering exclusivity, and parking.",
+          "linked_vendor_category": "venue",
+          "depends_on": ["w-f-01", "w-f-02"]
+        },
+        {
+          "id": "w-f-04",
+          "title": "Set the wedding date (confirmed with venue)",
+          "offset_days_before": 320,
+          "priority": "critical",
+          "description": "Confirm the date once venue is secured.",
+          "linked_vendor_category": null,
+          "depends_on": ["w-f-03"]
+        }
+      ],
+      "Booking": [
+        {
+          "id": "w-b-01",
+          "title": "Book photographer and/or videographer",
+          "offset_days_before": 300,
+          "priority": "critical",
+          "description": "Top photographers book fast. Review portfolios, ask about backup plans and RAW file delivery.",
+          "linked_vendor_category": "photographer",
+          "depends_on": ["w-f-04"]
+        },
+        {
+          "id": "w-b-02",
+          "title": "Book caterer or confirm in-house catering",
+          "offset_days_before": 280,
+          "priority": "critical",
+          "description": "Request a tasting session. Clarify dietary accommodations in the contract.",
+          "linked_vendor_category": "caterer",
+          "depends_on": ["w-f-02", "w-f-03"]
+        },
+        {
+          "id": "w-b-03",
+          "title": "Book officiant / priest / celebrant",
+          "offset_days_before": 270,
+          "priority": "high",
+          "description": "For religious ceremonies, book well in advance and confirm ceremony requirements.",
+          "linked_vendor_category": "officiant",
+          "depends_on": ["w-f-04"]
+        },
+        {
+          "id": "w-b-04",
+          "title": "Book music / band / DJ",
+          "offset_days_before": 240,
+          "priority": "high",
+          "description": "Confirm playlist flexibility, equipment, and overtime rates.",
+          "linked_vendor_category": "music",
+          "depends_on": ["w-f-03"]
+        },
+        {
+          "id": "w-b-05",
+          "title": "Book florist / decorator",
+          "offset_days_before": 220,
+          "priority": "high",
+          "description": "Share your theme and colour palette. Confirm flowers seasonal availability.",
+          "linked_vendor_category": "decorator",
+          "depends_on": ["w-f-01"]
+        },
+        {
+          "id": "w-b-06",
+          "title": "Book hair and makeup artist",
+          "offset_days_before": 200,
+          "priority": "high",
+          "description": "Schedule a trial run at least 2 months before the event.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "w-b-07",
+          "title": "Order wedding attire",
+          "offset_days_before": 180,
+          "priority": "critical",
+          "description": "Allow 4–6 months for custom made; 2–3 months for alterations.",
+          "linked_vendor_category": "attire"
+        },
+        {
+          "id": "w-b-08",
+          "title": "Book transport (couple and guests)",
+          "offset_days_before": 150,
+          "priority": "normal",
+          "description": "Arrange transport for the wedding party and consider shuttle services for guests.",
+          "linked_vendor_category": "transport"
+        }
+      ],
+      "Details": [
+        {
+          "id": "w-d-01",
+          "title": "Send save-the-dates",
+          "offset_days_before": 270,
+          "priority": "high",
+          "description": "Send to all guests, especially those who need to travel.",
+          "linked_vendor_category": null,
+          "depends_on": ["w-f-04"]
+        },
+        {
+          "id": "w-d-02",
+          "title": "Send formal invitations",
+          "offset_days_before": 120,
+          "priority": "high",
+          "description": "Include RSVP deadline (6–8 weeks before event), menu choices, and directions.",
+          "linked_vendor_category": null,
+          "depends_on": ["w-d-01"]
+        },
+        {
+          "id": "w-d-03",
+          "title": "Confirm dietary requirements from RSVPs",
+          "offset_days_before": 60,
+          "priority": "critical",
+          "description": "Compile final dietary list and share with caterer.",
+          "linked_vendor_category": "caterer",
+          "depends_on": ["w-d-02"]
+        },
+        {
+          "id": "w-d-04",
+          "title": "Book cake / dessert table",
+          "offset_days_before": 120,
+          "priority": "normal",
+          "description": "Book a tasting. Confirm delivery logistics with the venue.",
+          "linked_vendor_category": "bakery"
+        },
+        {
+          "id": "w-d-05",
+          "title": "Create seating plan",
+          "offset_days_before": 30,
+          "priority": "high",
+          "description": "Finalise once RSVPs are in. Use accessibility needs to allocate appropriate seats.",
+          "linked_vendor_category": null,
+          "depends_on": ["w-d-03"]
+        },
+        {
+          "id": "w-d-06",
+          "title": "Finalise ceremony order and vows",
+          "offset_days_before": 30,
+          "priority": "critical",
+          "description": "Share the run-sheet with the officiant, venue, and MC.",
+          "linked_vendor_category": "officiant"
+        },
+        {
+          "id": "w-d-07",
+          "title": "Arrange event insurance",
+          "offset_days_before": 90,
+          "priority": "high",
+          "description": "Wedding insurance covers cancellation, venue damage, and vendor no-shows.",
+          "linked_vendor_category": null
+        }
+      ],
+      "Final Week": [
+        {
+          "id": "w-fw-01",
+          "title": "Confirm all vendors (phone/email check-in)",
+          "offset_days_before": 7,
+          "priority": "critical",
+          "description": "Confirm arrival times, contacts, and any last-minute requirements with every vendor.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "w-fw-02",
+          "title": "Deliver final guest count and dietary list to caterer",
+          "offset_days_before": 5,
+          "priority": "critical",
+          "description": "Most caterers require final numbers 5–7 days before.",
+          "linked_vendor_category": "caterer"
+        },
+        {
+          "id": "w-fw-03",
+          "title": "Prepare vendor payments and gratuities",
+          "offset_days_before": 3,
+          "priority": "high",
+          "description": "Prepare envelopes or transfers. Assign someone to hand them out on the day.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "w-fw-04",
+          "title": "Delegate day-of tasks to wedding party / coordinator",
+          "offset_days_before": 2,
+          "priority": "critical",
+          "description": "Distribute the run-sheet. Ensure at least one person can handle emergencies.",
+          "linked_vendor_category": null
+        }
+      ],
+      "Event Day": [
+        {
+          "id": "w-ed-01",
+          "title": "Morning preparation and getting ready",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "Hair, makeup, and attire. Allow extra time — things always run behind schedule.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "w-ed-02",
+          "title": "Ceremony",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "The ceremony is the heart of the day. Arrive 30 minutes early.",
+          "linked_vendor_category": "officiant"
+        },
+        {
+          "id": "w-ed-03",
+          "title": "Photography session (portraits)",
+          "offset_days_before": 0,
+          "priority": "high",
+          "description": "Typically 30–60 minutes of formal portraits after the ceremony.",
+          "linked_vendor_category": "photographer"
+        },
+        {
+          "id": "w-ed-04",
+          "title": "Reception and meal service",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "Welcome drinks, meal service, speeches, and cake cutting.",
+          "linked_vendor_category": "caterer"
+        },
+        {
+          "id": "w-ed-05",
+          "title": "Dancing and entertainment",
+          "offset_days_before": 0,
+          "priority": "high",
+          "description": "First dance, parent dances, open floor.",
+          "linked_vendor_category": "music"
+        }
+      ],
+      "After": [
+        {
+          "id": "w-a-01",
+          "title": "Send thank-you notes",
+          "offset_days_before": -14,
+          "priority": "high",
+          "description": "Personalised notes within 2 weeks. Include gift acknowledgements.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "w-a-02",
+          "title": "Review and settle final vendor invoices",
+          "offset_days_before": -7,
+          "priority": "high",
+          "description": "Cross-check against contracts. Dispute any discrepancies promptly.",
+          "linked_vendor_category": null
+        }
+      ]
+    }
+  },
+  "birthday": {
+    "ideal_lead_days": 56,
+    "phases": {
+      "Foundations": [
+        {
+          "id": "bd-f-01",
+          "title": "Set budget and theme",
+          "offset_days_before": 52,
+          "priority": "critical",
+          "description": "Agree on budget and party theme. Consider the guest of honour's preferences.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "bd-f-02",
+          "title": "Create guest list and confirm numbers",
+          "offset_days_before": 50,
+          "priority": "critical",
+          "description": "Finalise the guest list to guide venue and catering decisions.",
+          "linked_vendor_category": null,
+          "depends_on": ["bd-f-01"]
+        },
+        {
+          "id": "bd-f-03",
+          "title": "Book venue",
+          "offset_days_before": 42,
+          "priority": "critical",
+          "description": "Restaurant private room, party venue, or home. Confirm capacity and catering policy.",
+          "linked_vendor_category": "venue",
+          "depends_on": ["bd-f-02"]
+        }
+      ],
+      "Booking": [
+        {
+          "id": "bd-b-01",
+          "title": "Book caterer or plan menu",
+          "offset_days_before": 35,
+          "priority": "critical",
+          "description": "For home parties, plan the menu. For venues, confirm catering options and dietary needs.",
+          "linked_vendor_category": "caterer",
+          "depends_on": ["bd-f-03"]
+        },
+        {
+          "id": "bd-b-02",
+          "title": "Order birthday cake",
+          "offset_days_before": 21,
+          "priority": "high",
+          "description": "Custom cakes need 2–3 weeks. Confirm flavours, design, and allergens.",
+          "linked_vendor_category": "bakery"
+        },
+        {
+          "id": "bd-b-03",
+          "title": "Book entertainment",
+          "offset_days_before": 28,
+          "priority": "high",
+          "description": "Clown, magician, DJ, or activity provider. Get references and check insurance.",
+          "linked_vendor_category": "entertainer"
+        }
+      ],
+      "Details": [
+        {
+          "id": "bd-d-01",
+          "title": "Send invitations",
+          "offset_days_before": 28,
+          "priority": "high",
+          "description": "Digital or physical invitations. Include RSVP deadline, directions, and theme details.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "bd-d-02",
+          "title": "Arrange decorations and party supplies",
+          "offset_days_before": 14,
+          "priority": "normal",
+          "description": "Order or DIY decorations aligned with the theme.",
+          "linked_vendor_category": "decorator"
+        },
+        {
+          "id": "bd-d-03",
+          "title": "Plan party bag / favours",
+          "offset_days_before": 14,
+          "priority": "normal",
+          "description": "Especially important for children's parties.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "bd-d-04",
+          "title": "Confirm final guest count with venue/caterer",
+          "offset_days_before": 7,
+          "priority": "critical",
+          "description": "Update numbers with any last-minute RSVPs.",
+          "linked_vendor_category": "caterer",
+          "depends_on": ["bd-d-01"]
+        }
+      ],
+      "Final Week": [
+        {
+          "id": "bd-fw-01",
+          "title": "Confirm all bookings and logistics",
+          "offset_days_before": 7,
+          "priority": "critical",
+          "description": "Call all vendors to confirm times, addresses, and requirements.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "bd-fw-02",
+          "title": "Prepare decorations and set up plan",
+          "offset_days_before": 2,
+          "priority": "high",
+          "description": "Pack decorations and plan the set-up timeline for the day before or morning of.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "bd-fw-03",
+          "title": "Charge and test any AV / playlist equipment",
+          "offset_days_before": 1,
+          "priority": "normal",
+          "description": "Test speakers, projector, and microphone. Prepare the playlist.",
+          "linked_vendor_category": null
+        }
+      ],
+      "Event Day": [
+        {
+          "id": "bd-ed-01",
+          "title": "Set up venue (decorations, tables, activities)",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "Arrive at least 90 minutes early to set up.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "bd-ed-02",
+          "title": "Welcome guests and run party programme",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "Greet guests, run activities, manage the timeline.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "bd-ed-03",
+          "title": "Cake, singing and photos",
+          "offset_days_before": 0,
+          "priority": "high",
+          "description": "The centrepiece moment. Designate someone for photography.",
+          "linked_vendor_category": "bakery"
+        }
+      ],
+      "After": [
+        {
+          "id": "bd-a-01",
+          "title": "Send thank-you messages",
+          "offset_days_before": -3,
+          "priority": "normal",
+          "description": "Short, personalised thank-you messages to all guests.",
+          "linked_vendor_category": null
+        }
+      ]
+    }
+  },
+  "community": {
+    "ideal_lead_days": 84,
+    "phases": {
+      "Foundations": [
+        {
+          "id": "ce-f-01",
+          "title": "Define event goals, target audience, and success metrics",
+          "offset_days_before": 80,
+          "priority": "critical",
+          "description": "Clarify what the event aims to achieve and how success will be measured.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "ce-f-02",
+          "title": "Form organising committee and assign roles",
+          "offset_days_before": 78,
+          "priority": "critical",
+          "description": "Assign lead roles: logistics, finance, volunteers, communications, and safety.",
+          "linked_vendor_category": null,
+          "depends_on": ["ce-f-01"]
+        },
+        {
+          "id": "ce-f-03",
+          "title": "Apply for permits (venue, road closure, noise, food)",
+          "offset_days_before": 70,
+          "priority": "critical",
+          "description": "Permit processing can take 4–8 weeks. Apply as early as possible. Requirements vary by location.",
+          "linked_vendor_category": "permit_office",
+          "depends_on": ["ce-f-01"]
+        },
+        {
+          "id": "ce-f-04",
+          "title": "Arrange event liability insurance",
+          "offset_days_before": 65,
+          "priority": "critical",
+          "description": "Required by most venues and local authorities. Cover includes public liability and cancellation.",
+          "linked_vendor_category": null,
+          "depends_on": ["ce-f-03"]
+        },
+        {
+          "id": "ce-f-05",
+          "title": "Book venue / outdoor space",
+          "offset_days_before": 60,
+          "priority": "critical",
+          "description": "Confirm accessibility, parking, power supply, and waste management.",
+          "linked_vendor_category": "venue",
+          "depends_on": ["ce-f-03"]
+        }
+      ],
+      "Booking": [
+        {
+          "id": "ce-b-01",
+          "title": "Book caterers or coordinate food stalls",
+          "offset_days_before": 50,
+          "priority": "high",
+          "description": "Ensure variety and dietary coverage. Confirm food handler certifications.",
+          "linked_vendor_category": "caterer",
+          "depends_on": ["ce-f-05"]
+        },
+        {
+          "id": "ce-b-02",
+          "title": "Book AV / PA system and stage equipment",
+          "offset_days_before": 45,
+          "priority": "high",
+          "description": "Size the PA to the venue. Include hearing loop if accessibility is required.",
+          "linked_vendor_category": "av_sound",
+          "depends_on": ["ce-f-05"]
+        },
+        {
+          "id": "ce-b-03",
+          "title": "Book first aid provider",
+          "offset_days_before": 42,
+          "priority": "critical",
+          "description": "Mandatory for events over 200 guests in most jurisdictions. Confirm staff-to-guest ratio.",
+          "linked_vendor_category": "first_aid",
+          "depends_on": ["ce-f-04"]
+        },
+        {
+          "id": "ce-b-04",
+          "title": "Book security team",
+          "offset_days_before": 42,
+          "priority": "high",
+          "description": "SIA-licensed staff for public events. Brief on crowd management and emergency procedures.",
+          "linked_vendor_category": "security"
+        },
+        {
+          "id": "ce-b-05",
+          "title": "Recruit and brief volunteers",
+          "offset_days_before": 35,
+          "priority": "high",
+          "description": "Assign clear roles, provide training, and arrange refreshments.",
+          "linked_vendor_category": null
+        }
+      ],
+      "Details": [
+        {
+          "id": "ce-d-01",
+          "title": "Launch event publicity and social media",
+          "offset_days_before": 56,
+          "priority": "high",
+          "description": "Social media, local press, community noticeboards. Include accessibility info.",
+          "linked_vendor_category": null,
+          "depends_on": ["ce-f-01"]
+        },
+        {
+          "id": "ce-d-02",
+          "title": "Set up ticketing (if applicable)",
+          "offset_days_before": 49,
+          "priority": "high",
+          "description": "Use an accessible ticketing platform. Offer concessionary pricing.",
+          "linked_vendor_category": null,
+          "depends_on": ["ce-d-01"]
+        },
+        {
+          "id": "ce-d-03",
+          "title": "Finalise programme and schedule",
+          "offset_days_before": 21,
+          "priority": "high",
+          "description": "Share with all vendors, volunteers, and key stakeholders.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "ce-d-04",
+          "title": "Conduct site walkthrough with key stakeholders",
+          "offset_days_before": 14,
+          "priority": "critical",
+          "description": "Check accessibility routes, emergency exits, first aid stations, and vendor positions.",
+          "linked_vendor_category": null,
+          "depends_on": ["ce-f-05"]
+        },
+        {
+          "id": "ce-d-05",
+          "title": "Prepare emergency and evacuation plan",
+          "offset_days_before": 21,
+          "priority": "critical",
+          "description": "Share with all staff, volunteers, security, and first aid teams.",
+          "linked_vendor_category": "first_aid"
+        }
+      ],
+      "Final Week": [
+        {
+          "id": "ce-fw-01",
+          "title": "Confirm all vendors and volunteers",
+          "offset_days_before": 7,
+          "priority": "critical",
+          "description": "Final check-in with everyone. Distribute schedules and emergency contacts.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "ce-fw-02",
+          "title": "Set up event management communications (walkie-talkies / group chat)",
+          "offset_days_before": 5,
+          "priority": "high",
+          "description": "Ensure all team leads can communicate in real time on the day.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "ce-fw-03",
+          "title": "Prepare volunteer briefing packs",
+          "offset_days_before": 3,
+          "priority": "normal",
+          "description": "Include role descriptions, schedule, emergency procedures, and contact list.",
+          "linked_vendor_category": null
+        }
+      ],
+      "Event Day": [
+        {
+          "id": "ce-ed-01",
+          "title": "Venue set-up and equipment check",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "Arrive 3–4 hours early. Test all AV, check accessibility routes, and brief all staff.",
+          "linked_vendor_category": "av_sound"
+        },
+        {
+          "id": "ce-ed-02",
+          "title": "Open gates / doors and welcome attendees",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "Ensure accessible entry is clearly signed and staffed.",
+          "linked_vendor_category": "security"
+        },
+        {
+          "id": "ce-ed-03",
+          "title": "Run event programme",
+          "offset_days_before": 0,
+          "priority": "critical",
+          "description": "MC manages the programme. Team leads monitor their areas.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "ce-ed-04",
+          "title": "Venue clear-down and waste management",
+          "offset_days_before": 0,
+          "priority": "high",
+          "description": "Leave the site in the agreed condition. Segregate waste for recycling.",
+          "linked_vendor_category": null
+        }
+      ],
+      "After": [
+        {
+          "id": "ce-a-01",
+          "title": "Collect feedback from attendees and volunteers",
+          "offset_days_before": -7,
+          "priority": "high",
+          "description": "Survey or debrief to capture learnings for future events.",
+          "linked_vendor_category": null
+        },
+        {
+          "id": "ce-a-02",
+          "title": "Produce event report (financials, attendance, outcomes)",
+          "offset_days_before": -14,
+          "priority": "high",
+          "description": "Document what worked, what didn't, and recommendations for next time.",
+          "linked_vendor_category": null
+        }
+      ]
+    }
+  }
+}

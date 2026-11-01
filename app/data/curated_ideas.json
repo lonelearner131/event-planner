@@ -1,0 +1,440 @@
+{
+  "_comment": "Curated fallback ideas, filtered by event_type and budget_tier (comfortable|workable|tight|unrealistic).",
+  "wedding": {
+    "comfortable": {
+      "themes": [
+        {
+          "name": "Garden Romance",
+          "description": "A lush, floral celebration with softly draped fabric, abundant greenery, and warm candlelight that transforms any venue into an enchanted garden.",
+          "palette": ["blush rose", "sage green", "ivory", "champagne gold"]
+        },
+        {
+          "name": "Timeless Elegance",
+          "description": "Classic black-tie with monochrome sophistication, statement florals, and clean architectural lines — a look that photographs beautifully decades later.",
+          "palette": ["ivory", "black", "silver", "deep burgundy"]
+        },
+        {
+          "name": "Bohemian Sunset",
+          "description": "Free-spirited and warm, with rattan furniture, pampas grass, macramé accents, and a golden-hour colour palette.",
+          "palette": ["terracotta", "burnt orange", "dusty mauve", "warm cream"]
+        }
+      ],
+      "activities": [
+        "Cocktail hour with live acoustic music or a string quartet",
+        "Personalised wedding quiz during the drinks reception",
+        "Polaroid photo booth with custom frames",
+        "Lawn games (croquet, giant Jenga) for outdoor receptions",
+        "Signature cocktail named after the couple"
+      ],
+      "menu_suggestions": [
+        "Three-course plated dinner with a vegetarian option for every course",
+        "Grazing table with artisan cheeses, charcuterie, and seasonal fruits for cocktail hour",
+        "Dessert station with miniature pastries, macarons, and individual wedding cakes",
+        "Midnight snack: sliders or stone-baked mini pizzas",
+        "Mocktail bar with zero-alcohol alternatives throughout"
+      ],
+      "decor_ideas": [
+        "Statement suspended floral cloud above the head table",
+        "Pillar candles of varying heights on mirrored trays as centrepieces",
+        "Personalised menus and place cards with calligraphy",
+        "Softbox fairy-light curtain as a photogenic backdrop",
+        "Herb-and-flower table runners that guests can take home"
+      ],
+      "music_vibes": [
+        "String quartet for the ceremony and cocktail hour",
+        "Live band for the reception — jazz → pop → dance progression",
+        "Curated playlist: Frank Sinatra to Beyoncé for the dinner hour",
+        "First dance: a meaningful song, optionally with a DJ mashup reveal"
+      ],
+      "sample_invitation": "Together with their families, [Name] and [Name] joyfully invite you to celebrate their marriage on [Date] at [Venue]. Dinner, dancing, and an evening to remember await. Kindly reply by [RSVP Date].",
+      "money_saving_ideas": [
+        "Book a Friday or Sunday — venues often charge 20–30% less than Saturday",
+        "Choose flowers in season — ask your florist for what's abundant in your wedding month",
+        "Limit the bar to wine, beer, and one signature cocktail rather than a full open bar",
+        "Serve a dessert table instead of individual plated desserts to reduce kitchen labour"
+      ],
+      "accessibility_touches": [
+        "Reserve front-row seats for guests with mobility needs",
+        "Provide large-print or digital menu cards",
+        "Ensure the dance floor has a smooth, firm surface",
+        "Arrange a quiet breakout room for guests who need a calm space"
+      ]
+    },
+    "workable": {
+      "themes": [
+        {
+          "name": "Rustic Charm",
+          "description": "Wooden accents, mason jars, wildflowers, and warm string lights create an intimate atmosphere with a lot of DIY personality.",
+          "palette": ["warm white", "forest green", "natural wood", "soft blush"]
+        },
+        {
+          "name": "Modern Minimalist",
+          "description": "Clean lines, single-variety floral arrangements, and a restrained colour palette that looks expensive without the price tag.",
+          "palette": ["white", "light grey", "muted terracotta", "black"]
+        }
+      ],
+      "activities": [
+        "Self-service Polaroid station with a prop basket",
+        "Lawn games if the venue allows",
+        "Wedding bingo cards on each seat for the ceremony"
+      ],
+      "menu_suggestions": [
+        "Buffet service — reduces plated service staff costs significantly",
+        "Family-style sharing platters for a convivial atmosphere",
+        "DIY taco or pasta bar — crowd-pleasing and cost-effective",
+        "Cake and coffee station rather than a full dessert menu"
+      ],
+      "decor_ideas": [
+        "DIY centrepieces with bud vases, candles, and greenery",
+        "Foliage garlands from a wholesale market to dress tables and arches",
+        "Paper flower backdrop — striking visual with modest material cost",
+        "Battery-powered fairy lights — no need for an electrician"
+      ],
+      "music_vibes": [
+        "DJ for the full reception — versatile and cost-effective",
+        "Curated Spotify playlist for ceremony and dinner",
+        "Encourage guests to suggest songs via a digital request form"
+      ],
+      "sample_invitation": "[Name] & [Name] would love you to join them as they say 'I do' on [Date] at [Venue]. Celebrations follow. Please RSVP by [RSVP Date].",
+      "money_saving_ideas": [
+        "DIY your invitations and order of service using Canva",
+        "Hire student musicians from a local music college — great talent, lower cost",
+        "Use potted plants as centrepieces that guests can take home",
+        "Choose a venue that allows outside catering"
+      ],
+      "accessibility_touches": [
+        "Clearly mark accessible parking and entrances on the map you send guests",
+        "Check that the venue has accessible bathrooms and confirm with the coordinator"
+      ]
+    },
+    "tight": {
+      "themes": [
+        {
+          "name": "Intimate Garden Party",
+          "description": "A small, heartfelt celebration in a garden or park with close family and friends — the intimacy makes it special.",
+          "palette": ["cream", "soft yellow", "pale green", "white"]
+        }
+      ],
+      "activities": ["Shared meal with toasts from loved ones", "Music playlist curated by guests"],
+      "menu_suggestions": [
+        "Home-cooked feast with contributions from family — meaningful and personal",
+        "Catered buffet for essential dishes, home-made extras",
+        "Wedding cake as the main dessert"
+      ],
+      "decor_ideas": [
+        "Flowers from a farmers' market arranged at home",
+        "Candles and fairy lights for warm ambience",
+        "Personalised signage printed at home"
+      ],
+      "music_vibes": ["Curated playlist on a Bluetooth speaker", "Open mic moment for musical friends"],
+      "sample_invitation": "We're getting married! Please join us on [Date] at [Venue] for an intimate celebration. RSVP by [RSVP Date].",
+      "money_saving_ideas": [
+        "Keep the guest list small — per-head cost is the biggest driver",
+        "Marry on a weekday — venues are considerably cheaper",
+        "Opt for a civil ceremony and a restaurant lunch rather than a full venue hire",
+        "Borrow or rent decor from a wedding hire company"
+      ],
+      "accessibility_touches": [
+        "Ensure your chosen venue is accessible before booking",
+        "Ask guests to note any requirements when they RSVP"
+      ]
+    },
+    "unrealistic": {
+      "themes": [
+        {
+          "name": "Micro-Wedding",
+          "description": "A very intimate celebration with just immediate family. Quality over quantity — focus on one beautiful element rather than many.",
+          "palette": ["white", "green", "natural"]
+        }
+      ],
+      "activities": ["Heartfelt speeches", "Shared meal"],
+      "menu_suggestions": ["Restaurant dinner for close family", "Home-cooked celebration meal"],
+      "decor_ideas": ["Single statement floral arrangement", "Candles and personal photos"],
+      "music_vibes": ["Meaningful playlist on a phone speaker"],
+      "sample_invitation": "We'd love to share this moment with you. Join us on [Date] for a small, meaningful celebration.",
+      "money_saving_ideas": [
+        "Consider elopement with a dinner party afterwards",
+        "A register office ceremony costs a fraction of a venue hire",
+        "Celebrate with a larger party later when budget allows"
+      ],
+      "accessibility_touches": ["Choose a venue that's fully accessible from the outset"]
+    }
+  },
+  "birthday": {
+    "comfortable": {
+      "themes": [
+        {
+          "name": "Tropical Fiesta",
+          "description": "Vibrant tropical flowers, rattan furniture, tiki elements, and bold colours transport guests to a beachside paradise.",
+          "palette": ["hot pink", "sunshine yellow", "turquoise", "leaf green"]
+        },
+        {
+          "name": "Glamour & Gold",
+          "description": "Black-and-gold luxury with sequined backdrops, champagne towers, and velvet-ribbon details for a milestone birthday.",
+          "palette": ["black", "gold", "ivory", "deep plum"]
+        }
+      ],
+      "activities": [
+        "Cocktail masterclass for guests",
+        "Live DJ or band for dancing",
+        "Personalised trivia quiz about the birthday person",
+        "Photo booth with theme-appropriate props",
+        "Cooking station or interactive food activity"
+      ],
+      "menu_suggestions": [
+        "Grazing table for arrival — cheese, charcuterie, mezze",
+        "Sharing feast with multiple cuisines to cater to dietary variety",
+        "Custom birthday cake as a centrepiece moment",
+        "Dessert table with macarons, truffles, and themed sweets",
+        "Signature birthday cocktail and a mocktail alternative"
+      ],
+      "decor_ideas": [
+        "Balloon arch or ceiling installation in theme colours",
+        "Personalised banner with milestone age",
+        "Floral centrepieces with theme-coloured blooms",
+        "Neon sign with a fun birthday message",
+        "Photo wall with memories of the birthday person's life"
+      ],
+      "music_vibes": [
+        "Spotify playlist built around the birthday person's favourite decades",
+        "Live DJ for the dancing portion",
+        "Surprise live performance if budget allows"
+      ],
+      "sample_invitation": "You're invited to celebrate [Name]'s [Age] birthday! Join us for an unforgettable evening on [Date] at [Venue]. RSVP by [RSVP Date] — the more the merrier!",
+      "money_saving_ideas": [
+        "Host on a Sunday — venue hire is typically lower",
+        "Choose a restaurant buyout for smaller gatherings — saves on venue setup",
+        "Potluck dessert table where guests contribute a dish"
+      ],
+      "accessibility_touches": [
+        "Provide seating throughout (not just around tables) so guests with mobility needs can rest",
+        "Designate a quieter area away from the DJ for conversations"
+      ]
+    },
+    "workable": {
+      "themes": [
+        {
+          "name": "Garden Party",
+          "description": "Relaxed outdoor gathering with floral tablecloths, bunting, and seasonal flowers. Works beautifully in a garden or park.",
+          "palette": ["pastel pink", "lavender", "soft yellow", "white"]
+        },
+        {
+          "name": "Movie Night",
+          "description": "Outdoor or indoor cinema experience with blankets, popcorn, and a favourite film — personal and cosy.",
+          "palette": ["navy", "star yellow", "red", "warm white"]
+        }
+      ],
+      "activities": [
+        "Lawn games (ring toss, badminton, croquet)",
+        "DIY ice cream sundae bar",
+        "Birthday trivia or bingo"
+      ],
+      "menu_suggestions": [
+        "BBQ or buffet — cost-effective and social",
+        "Afternoon tea style spread — sandwiches, scones, cakes",
+        "Pizza party — universally popular"
+      ],
+      "decor_ideas": [
+        "DIY balloon garland using a pump and string",
+        "Photo bunting from printed favourite memories",
+        "Mason jar centrepieces with seasonal flowers"
+      ],
+      "music_vibes": ["DJ playlist on Spotify via a good Bluetooth speaker", "Live acoustic guitarist for background ambience"],
+      "sample_invitation": "It's [Name]'s birthday and we're celebrating! Come join us on [Date] at [Venue]. Drinks, food, and fun guaranteed. RSVP by [RSVP Date].",
+      "money_saving_ideas": [
+        "Host at home or in a community hall to save venue costs",
+        "Bake the birthday cake yourself or ask a talented friend",
+        "Buy decorations from a pound/dollar store and add personal touches"
+      ],
+      "accessibility_touches": [
+        "Ensure garden paths are firm and flat if hosting outdoors",
+        "Offer quieter seating away from speakers"
+      ]
+    },
+    "tight": {
+      "themes": [
+        {
+          "name": "Backyard BBQ",
+          "description": "Relaxed, fun, and completely focused on good food and good people. The original budget celebration.",
+          "palette": ["red", "blue", "white", "warm yellow"]
+        }
+      ],
+      "activities": ["Garden games", "Music playlist", "Storytelling round — favourite memory of the birthday person"],
+      "menu_suggestions": [
+        "DIY BBQ with guests contributing side dishes",
+        "Homemade birthday cake — often more sentimental",
+        "BYO drinks policy to keep costs manageable"
+      ],
+      "decor_ideas": [
+        "Homemade bunting from fabric scraps",
+        "Colourful paper plates and cups from a discount store",
+        "Photos on a string across the garden"
+      ],
+      "music_vibes": ["Phone playlist through a Bluetooth speaker"],
+      "sample_invitation": "Come celebrate [Name]'s birthday on [Date] at [Address]. Bring something to BBQ and something to drink!",
+      "money_saving_ideas": [
+        "Potluck format — ask guests to each bring a dish",
+        "Skip the venue and use your garden or a friend's space",
+        "Digital invitations save on print and postage"
+      ],
+      "accessibility_touches": ["Check the outdoor space is suitable for any guests with mobility requirements"]
+    },
+    "unrealistic": {
+      "themes": [
+        {
+          "name": "Cosy Kitchen Party",
+          "description": "Small group of close friends or family, home-cooked food, and genuine celebration — often the most memorable kind.",
+          "palette": ["warm cream", "terracotta", "natural wood"]
+        }
+      ],
+      "activities": ["Shared meal", "Board games", "Favourite film"],
+      "menu_suggestions": ["Home-cooked favourite meal", "Shop-bought birthday cake"],
+      "decor_ideas": ["A few balloons", "Candles on the table"],
+      "music_vibes": ["Playlist on a phone"],
+      "sample_invitation": "Come over for [Name]'s birthday on [Date]! Just good food and good company.",
+      "money_saving_ideas": [
+        "Focus on 1–2 meaningful touches rather than trying to do everything",
+        "A heartfelt handwritten card is often more valued than a gift"
+      ],
+      "accessibility_touches": ["Ensure your home is accessible for all guests you invite"]
+    }
+  },
+  "community": {
+    "comfortable": {
+      "themes": [
+        {
+          "name": "Community Fair",
+          "description": "A vibrant outdoor fair with stalls, live entertainment, and activities for all ages — the quintessential community celebration.",
+          "palette": ["bright red", "sunny yellow", "royal blue", "white"]
+        },
+        {
+          "name": "Cultural Festival",
+          "description": "A rich celebration of local heritage with traditional food stalls, music, art, and storytelling that brings diverse communities together.",
+          "palette": ["jewel tones", "gold", "deep red", "forest green"]
+        }
+      ],
+      "activities": [
+        "Live music stage with local acts",
+        "Arts and crafts workshops for children and adults",
+        "Sports activities and competitions",
+        "Community photo display or heritage exhibition",
+        "Traditional games from the local culture"
+      ],
+      "menu_suggestions": [
+        "Multiple food stalls representing local cuisines",
+        "Dedicated vegan and gluten-free stalls",
+        "Local brew or soft drink bar",
+        "Dedicated children's food area with simple, allergen-aware options"
+      ],
+      "decor_ideas": [
+        "Colourful bunting and flags down main pathways",
+        "Local artwork displayed around the venue",
+        "Interactive community message board where attendees add notes",
+        "Signage in multiple languages reflecting the community"
+      ],
+      "music_vibes": [
+        "Local bands and performers across the day",
+        "Open mic sessions to showcase community talent",
+        "Background world music playlist between live acts"
+      ],
+      "sample_invitation": "Join us for [Event Name] on [Date] at [Venue]! A day of food, music, and community spirit. Free entry. All are welcome.",
+      "money_saving_ideas": [
+        "Partner with local businesses for sponsorship in exchange for a stall or banner",
+        "Recruit volunteers rather than paid staff for stewarding",
+        "Apply for community grants — many local councils and charities fund public events"
+      ],
+      "accessibility_touches": [
+        "Publish a detailed accessibility guide on all promotional materials",
+        "Provide a quiet zone away from the main stage",
+        "Arrange BSL interpretation for stage presentations",
+        "Designate priority viewing areas near the stage"
+      ]
+    },
+    "workable": {
+      "themes": [
+        {
+          "name": "Street Party",
+          "description": "Classic neighbourhood celebration on a closed-off street with bunting, trestle tables, and a joyful community spirit.",
+          "palette": ["union flag colours or local equivalent", "white", "primary colours"]
+        }
+      ],
+      "activities": [
+        "Egg-and-spoon and sack races for children",
+        "Community quiz or bingo",
+        "Cake stall and tombola to raise funds"
+      ],
+      "menu_suggestions": [
+        "Potluck format — residents bring dishes to share",
+        "Donated or sponsored food stalls",
+        "BBQ with simple burger and sausage options"
+      ],
+      "decor_ideas": [
+        "Homemade bunting made at a community workshop beforehand",
+        "Tables decorated by local school children",
+        "Balloons and flowers from a local wholesaler"
+      ],
+      "music_vibes": ["Local band or DJ", "Community choir performance", "PA system for announcements and playlist"],
+      "sample_invitation": "You're invited to [Event Name] on [Date] — [Venue/Street Name]. Free for all residents. Bring a dish to share!",
+      "money_saving_ideas": [
+        "Apply for a street party licence — often free for small community events",
+        "Source donated prizes for raffles and tombolas",
+        "Partner with a local supermarket to sponsor refreshments"
+      ],
+      "accessibility_touches": [
+        "Ensure road surface is accessible for wheelchairs",
+        "Provide shaded and seating areas throughout"
+      ]
+    },
+    "tight": {
+      "themes": [
+        {
+          "name": "Community Gathering",
+          "description": "A simple, purposeful gathering focused on connection and shared goals rather than elaborate production.",
+          "palette": ["clean white", "community colours", "natural green"]
+        }
+      ],
+      "activities": ["Open forum or community discussion", "Children's activity corner", "Local talent showcase"],
+      "menu_suggestions": [
+        "Potluck contributions from attendees",
+        "Sponsored refreshments from local businesses",
+        "Simple tea and coffee station"
+      ],
+      "decor_ideas": [
+        "Printed signage and posters",
+        "Community noticeboard as a centrepiece",
+        "Volunteer-made decorations"
+      ],
+      "music_vibes": ["Local musician volunteering their time", "Curated playlist via a phone and speaker"],
+      "sample_invitation": "Join us for [Event Name] on [Date] at [Venue]. Come together and celebrate our community!",
+      "money_saving_ideas": [
+        "Use a community centre or library — often free or low-cost for community groups",
+        "Ask local businesses to donate refreshments in exchange for a mention",
+        "Recruit volunteers for all stewarding and setup roles"
+      ],
+      "accessibility_touches": [
+        "Choose an accessible venue as the top priority",
+        "Use plain-language communications in all promotional materials"
+      ]
+    },
+    "unrealistic": {
+      "themes": [
+        {
+          "name": "Pop-Up Community Hub",
+          "description": "A minimal, volunteer-led event in a community space that focuses on connection and conversation over production value.",
+          "palette": ["natural", "white", "community colours"]
+        }
+      ],
+      "activities": ["Community conversation circles", "Skill-sharing session"],
+      "menu_suggestions": ["Tea and biscuits", "Donated refreshments"],
+      "decor_ideas": ["Printed posters", "Volunteer-made banner"],
+      "music_vibes": ["Acoustic volunteer performer"],
+      "sample_invitation": "You are warmly invited to join [Event Name] on [Date] at [Venue]. Free to attend.",
+      "money_saving_ideas": [
+        "Focus on one central activity rather than spreading the budget thin",
+        "Apply for emergency community grants",
+        "Partner with a local charity who may have an existing budget"
+      ],
+      "accessibility_touches": ["Accessible venue is non-negotiable even on the tightest budget"]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_comment": "Per-guest cost bands by currency and event type. Status thresholds: comfortable, workable, tight, unrealistic.",
+  "wedding": {
+    "INR": {"comfortable": 6000, "workable": 2500, "tight": 1200},
+    "USD": {"comfortable": 300,  "workable": 120,  "tight": 60},
+    "EUR": {"comfortable": 350,  "workable": 140,  "tight": 70},
+    "GBP": {"comfortable": 320,  "workable": 130,  "tight": 65}
+  },
+  "birthday": {
+    "INR": {"comfortable": 2000, "workable": 800,  "tight": 400},
+    "USD": {"comfortable": 100,  "workable": 40,   "tight": 20},
+    "EUR": {"comfortable": 110,  "workable": 45,   "tight": 22},
+    "GBP": {"comfortable": 95,   "workable": 38,   "tight": 19}
+  },
+  "community": {
+    "INR": {"comfortable": 1500, "workable": 600,  "tight": 250},
+    "USD": {"comfortable": 75,   "workable": 30,   "tight": 12},
+    "EUR": {"comfortable": 80,   "workable": 32,   "tight": 14},
+    "GBP": {"comfortable": 70,   "workable": 28,   "tight": 11}
+  }
+}

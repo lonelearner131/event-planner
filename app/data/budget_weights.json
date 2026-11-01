@@ -1,0 +1,72 @@
+{
+  "wedding": {
+    "venue": 0.30,
+    "catering": 0.28,
+    "photography": 0.12,
+    "decor": 0.10,
+    "music": 0.06,
+    "attire": 0.06,
+    "transport": 0.03,
+    "stationery": 0.02,
+    "contingency": 0.10,
+    "_notes": {
+      "venue": "Largest single spend for most weddings",
+      "catering": "Per-head cost scales with guest count",
+      "photography": "Couples prioritise memories",
+      "contingency": "Minimum 10% for weddings due to complexity"
+    }
+  },
+  "birthday": {
+    "venue": 0.25,
+    "catering": 0.35,
+    "decor": 0.12,
+    "entertainment": 0.10,
+    "cake_desserts": 0.05,
+    "invitations": 0.03,
+    "contingency": 0.10,
+    "_notes": {
+      "catering": "Food is the centrepiece of most birthday gatherings",
+      "entertainment": "Critical for children's birthdays",
+      "contingency": "10% standard"
+    }
+  },
+  "community": {
+    "venue": 0.20,
+    "catering": 0.25,
+    "equipment_av": 0.10,
+    "permits_insurance": 0.08,
+    "publicity_marketing": 0.08,
+    "decor": 0.07,
+    "first_aid_security": 0.06,
+    "volunteer_refreshments": 0.06,
+    "contingency": 0.10,
+    "_notes": {
+      "permits_insurance": "Mandatory for public outdoor events",
+      "first_aid_security": "Required by most local authorities for events >100 guests",
+      "volunteer_refreshments": "Keeps volunteer morale high"
+    }
+  },
+  "priority_boosts": {
+    "food": {"catering": 0.08, "cake_desserts": 0.02},
+    "music": {"music": 0.06, "equipment_av": 0.04},
+    "photography": {"photography": 0.08},
+    "decor": {"decor": 0.08},
+    "attire": {"attire": 0.06},
+    "entertainment": {"entertainment": 0.07},
+    "guest_experience": {"catering": 0.03, "decor": 0.02, "entertainment": 0.02}
+  },
+  "outdoor_additions": {
+    "rentals_tent_weather": 0.06
+  },
+  "children_additions": {
+    "kids_entertainment": 0.05
+  },
+  "accessibility_additions": {
+    "accessibility_facilities": 0.02
+  },
+  "diy_reductions": {
+    "low": 0.0,
+    "medium": {"decor": -0.03, "stationery": -0.01},
+    "high": {"decor": -0.06, "stationery": -0.02, "catering": -0.05}
+  }
+}

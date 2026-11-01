@@ -1,0 +1,336 @@
+{
+  "venue": {
+    "id": "vendor-venue",
+    "category": "Venue",
+    "applicable_events": ["wedding", "birthday", "community"],
+    "questions_to_ask": [
+      "What is the maximum capacity (standing and seated)?",
+      "Is catering in-house or can we bring our own?",
+      "What is the parking situation?",
+      "Is the venue fully accessible (wheelchair, hearing loop)?",
+      "What are the noise restrictions and curfew?",
+      "What is the deposit and cancellation policy?"
+    ],
+    "red_flags": [
+      "No written contract offered",
+      "Reluctant to show the venue at different times of day",
+      "No clear cancellation/refund policy",
+      "Hidden fees for cleaning, overtime, or setup",
+      "No public liability insurance certificate"
+    ],
+    "contract_checklist": [
+      "Venue hire start and end times (including setup and breakdown)",
+      "Maximum capacity clearly stated",
+      "Deposit amount, due date, and refund terms",
+      "Cancellation and postponement policy",
+      "Public liability insurance from the venue",
+      "Named backup contact if the coordinator changes",
+      "Overtime charges clearly defined"
+    ]
+  },
+  "caterer": {
+    "id": "vendor-caterer",
+    "category": "Caterer",
+    "applicable_events": ["wedding", "birthday", "community"],
+    "questions_to_ask": [
+      "Can you provide a tasting session?",
+      "How do you handle dietary requirements and allergies?",
+      "What is your staff-to-guest ratio for service?",
+      "Do you carry public liability and food handler certifications?",
+      "What is your contingency plan if a key staff member is ill?",
+      "What is included (equipment, linen, service staff)?"
+    ],
+    "red_flags": [
+      "Cannot provide allergen information in writing",
+      "No food handler certification",
+      "No tasting available before booking",
+      "Unclear about what 'per head' pricing includes",
+      "No references from similar-scale events"
+    ],
+    "contract_checklist": [
+      "Final headcount deadline (typically 5–7 days before)",
+      "Menu confirmed in writing with all dietary options listed",
+      "Allergen information documented",
+      "Staffing plan and staff-to-guest ratio",
+      "Setup, service, and cleanup times",
+      "Payment terms and final invoice process",
+      "Cancellation and force majeure clause"
+    ]
+  },
+  "photographer": {
+    "id": "vendor-photographer",
+    "category": "Photographer / Videographer",
+    "applicable_events": ["wedding", "birthday"],
+    "questions_to_ask": [
+      "Can we see a full event gallery (not just highlights)?",
+      "How do you back up photos on the day?",
+      "What is the turnaround time for edited images?",
+      "Who owns the copyright, and can we print/share freely?",
+      "Do you have a second shooter or backup photographer?",
+      "What happens if you are ill on the day?"
+    ],
+    "red_flags": [
+      "Portfolio shows only posed shots — no candids",
+      "No backup equipment or photographer",
+      "Vague turnaround time ('a few months')",
+      "Retains full copyright with restrictions on personal use",
+      "No public liability insurance"
+    ],
+    "contract_checklist": [
+      "Event date, hours, and locations covered",
+      "Number of edited images guaranteed",
+      "Delivery format (online gallery, USB, prints)",
+      "Turnaround time in writing",
+      "Copyright and usage rights",
+      "Deposit and payment schedule",
+      "Cancellation and postponement terms"
+    ]
+  },
+  "decorator": {
+    "id": "vendor-decorator",
+    "category": "Decorator / Florist",
+    "applicable_events": ["wedding", "birthday", "community"],
+    "questions_to_ask": [
+      "Are the flowers in season for our date?",
+      "Can you provide a mood board aligned with our theme?",
+      "What time can you set up at the venue?",
+      "Do you provide rentals (vases, stands, linens) or only florals?",
+      "What happens if a specific flower is unavailable?",
+      "Do you handle the breakdown and collection after the event?"
+    ],
+    "red_flags": [
+      "No clear itemised quote",
+      "Cannot show examples of similar-sized events",
+      "Unwilling to confirm substitutions in advance",
+      "Setup time conflicts with venue access"
+    ],
+    "contract_checklist": [
+      "Full itemised list of flowers and décor elements",
+      "Colour palette and style confirmed in writing",
+      "Setup and breakdown times",
+      "Substitution policy for unavailable items",
+      "Deposit and balance payment terms",
+      "Damage/loss liability for rental items"
+    ]
+  },
+  "music": {
+    "id": "vendor-music",
+    "category": "Music / DJ / Band",
+    "applicable_events": ["wedding", "birthday", "community"],
+    "questions_to_ask": [
+      "Can we hear a live set or see a recent performance video?",
+      "Do you bring your own PA system?",
+      "How do you handle music requests (and do-not-play lists)?",
+      "What are your overtime rates?",
+      "Do you carry public liability insurance?",
+      "What is your backup plan if equipment fails?"
+    ],
+    "red_flags": [
+      "No insurance or equipment list",
+      "Unwilling to learn specific songs or accommodate requests",
+      "Extra charges not disclosed upfront",
+      "Cannot provide references"
+    ],
+    "contract_checklist": [
+      "Performance hours and overtime rates",
+      "Equipment list (and whether it covers the venue size)",
+      "Do-not-play list and request process",
+      "Setup and sound-check time",
+      "Deposit and balance terms",
+      "Cancellation policy"
+    ]
+  },
+  "officiant": {
+    "id": "vendor-officiant",
+    "category": "Officiant / Priest / Celebrant",
+    "applicable_events": ["wedding"],
+    "questions_to_ask": [
+      "Are you legally authorised to perform marriages in this jurisdiction?",
+      "How do you approach cultural or religious ceremony elements?",
+      "Can we customise the ceremony script?",
+      "How many rehearsals are included?",
+      "What is your backup plan if you are ill?"
+    ],
+    "red_flags": [
+      "Cannot confirm legal authority",
+      "Rigid script with no room for personalisation",
+      "No experience with your cultural or religious background"
+    ],
+    "contract_checklist": [
+      "Legal authorisation confirmed",
+      "Number of rehearsals and pre-ceremony meetings",
+      "Ceremony structure and personalisation scope",
+      "Deposit and payment terms",
+      "Backup officiant named in contract"
+    ]
+  },
+  "transport": {
+    "id": "vendor-transport",
+    "category": "Transport",
+    "applicable_events": ["wedding", "community"],
+    "questions_to_ask": [
+      "How many vehicles and what capacity?",
+      "What are the pickup and drop-off routes and times?",
+      "Is the driver licensed and insured for passenger transport?",
+      "Is the vehicle accessible (wheelchair ramp)?",
+      "What is the overtime/waiting charge?"
+    ],
+    "red_flags": [
+      "No passenger transport insurance",
+      "Unlicensed driver",
+      "No named backup vehicle"
+    ],
+    "contract_checklist": [
+      "Vehicle type and capacity",
+      "Pickup and drop-off schedule",
+      "Driver name and license number",
+      "Fuel and overtime charges",
+      "Cancellation policy"
+    ]
+  },
+  "bakery": {
+    "id": "vendor-bakery",
+    "category": "Cake / Bakery",
+    "applicable_events": ["wedding", "birthday"],
+    "questions_to_ask": [
+      "Can we do a tasting?",
+      "Can you accommodate allergen-free tiers?",
+      "How is the cake delivered and set up?",
+      "How far in advance is the cake made?",
+      "What if the cake is damaged in transit?"
+    ],
+    "red_flags": [
+      "No tasting available",
+      "Cannot provide allergen information",
+      "Unclear about delivery logistics",
+      "No insurance for delivery damage"
+    ],
+    "contract_checklist": [
+      "Cake design, flavours, and tiers confirmed in writing",
+      "Allergen information documented",
+      "Delivery time and setup instructions",
+      "Damage/replacement policy",
+      "Deposit and balance terms"
+    ]
+  },
+  "entertainer": {
+    "id": "vendor-entertainer",
+    "category": "Entertainer (Children / Activities)",
+    "applicable_events": ["birthday", "community"],
+    "questions_to_ask": [
+      "Do you have a current DBS check (if working with children)?",
+      "What is the age range best suited to your act?",
+      "What space and equipment do you require?",
+      "How long is the performance/session?",
+      "What is your public liability insurance cover?"
+    ],
+    "red_flags": [
+      "No DBS check when working with children",
+      "Cannot confirm age appropriateness",
+      "No public liability insurance"
+    ],
+    "contract_checklist": [
+      "DBS/background check confirmed (if applicable)",
+      "Performance duration and format",
+      "Equipment and space requirements",
+      "Public liability insurance cover amount",
+      "Payment and cancellation terms"
+    ]
+  },
+  "permit_office": {
+    "id": "vendor-permit",
+    "category": "Permit Office / Council",
+    "applicable_events": ["community"],
+    "questions_to_ask": [
+      "What permits are required for this type and size of event?",
+      "What is the application deadline and processing time?",
+      "Are there restrictions on noise levels, hours, or activities?",
+      "Is a road or public space closure required?",
+      "What are the fees?"
+    ],
+    "red_flags": [
+      "No response within 2 weeks of submission",
+      "Permit granted verbally — always get written confirmation",
+      "Fees significantly higher than typical — verify with another authority"
+    ],
+    "contract_checklist": [
+      "All required permits listed and applied for",
+      "Written permit confirmation received",
+      "Noise and hours restrictions noted in event plan",
+      "Fees paid and receipts retained",
+      "Conditions of permit met (e.g. stewarding, barriers)"
+    ]
+  },
+  "security": {
+    "id": "vendor-security",
+    "category": "Security Team",
+    "applicable_events": ["community"],
+    "questions_to_ask": [
+      "Are all staff SIA licensed (UK) or hold equivalent local certification?",
+      "What is the staff-to-guest ratio you recommend?",
+      "Are you experienced with crowd management for this type of event?",
+      "Do you have a radio/communications plan?",
+      "What is your procedure for ejecting someone safely?"
+    ],
+    "red_flags": [
+      "Cannot produce SIA licence numbers",
+      "No experience with similar scale events",
+      "Undisclosed sub-contracting of staff"
+    ],
+    "contract_checklist": [
+      "Number of licensed security staff confirmed",
+      "Briefing and deployment plan documented",
+      "Emergency communication protocol agreed",
+      "Payment and cancellation terms"
+    ]
+  },
+  "first_aid": {
+    "id": "vendor-first-aid",
+    "category": "First Aid Provider",
+    "applicable_events": ["community"],
+    "questions_to_ask": [
+      "What qualifications do your first aiders hold?",
+      "What equipment will you bring (defibrillator, stretcher)?",
+      "How many staff per 100 guests?",
+      "What is your process for calling emergency services?",
+      "Do you have event liability insurance?"
+    ],
+    "red_flags": [
+      "Cannot provide qualification evidence",
+      "No defibrillator for events over 200 people",
+      "Staff-to-guest ratio below recommended levels"
+    ],
+    "contract_checklist": [
+      "Qualifications of all first aid staff confirmed",
+      "Equipment list agreed",
+      "Staff-to-guest ratio documented",
+      "Emergency services liaison procedure confirmed",
+      "Deployment start and end times"
+    ]
+  },
+  "av_sound": {
+    "id": "vendor-av",
+    "category": "AV / Sound / Stage",
+    "applicable_events": ["community", "birthday"],
+    "questions_to_ask": [
+      "Is the PA system sized for the venue and expected crowd?",
+      "Do you include a sound engineer on the day?",
+      "Can you provide a hearing loop for accessibility?",
+      "What is your setup time?",
+      "What backup equipment do you carry?"
+    ],
+    "red_flags": [
+      "No backup equipment",
+      "PA underpowered for the venue size",
+      "No hearing loop available",
+      "No sound check before guests arrive"
+    ],
+    "contract_checklist": [
+      "Equipment list confirmed in writing",
+      "Setup and sound check time",
+      "Hearing loop provision confirmed",
+      "Overtime and breakdown terms",
+      "Deposit and balance terms"
+    ]
+  }
+}
