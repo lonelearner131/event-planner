@@ -232,14 +232,11 @@ _INLINE_HANDLERS = [
 
 
 def test_no_inline_event_handlers() -> None:
-    """No element should have inline event handler attributes (except print button which uses onclick)."""
+    """No element should have inline event handler attributes (strict CSP)."""
     soup = get_soup()
     violations = []
     for handler in _INLINE_HANDLERS:
         for tag in soup.find_all(attrs={handler: True}):
-            # Allow the print button which uses window.print() inline
-            if handler == "onclick" and "print" in str(tag.get("onclick", "")):
-                continue
             violations.append(f"<{tag.name} id='{tag.get('id')}' {handler}='{tag.get(handler)}'>")
     assert not violations, "Inline event handlers found:\n" + "\n".join(violations)
 

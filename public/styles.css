@@ -7,6 +7,7 @@
 
 /* ---- Reset & base ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
 html { font-size: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 img, svg { max-width: 100%; display: block; }
@@ -517,6 +518,9 @@ input[aria-invalid="true"] {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+}
+.loading-overlay[hidden] {
+  display: none !important;
 }
 .loading-inner {
   background: var(--clr-surface);

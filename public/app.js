@@ -41,6 +41,7 @@
   const whatifBtn = document.getElementById("what-if-btn") || document.getElementById("whatif-btn");
   const exportIcsBtn = document.getElementById("export-ics-btn");
   const exportCsvBtn = document.getElementById("export-csv-btn");
+  const printBtn = document.getElementById("print-btn");
 
   // =========================================================================
   // Utility: safe DOM helpers
@@ -633,6 +634,12 @@
       } finally {
         exportCsvBtn.disabled = false;
       }
+    });
+  }
+
+  if (printBtn) {
+    printBtn.addEventListener("click", () => {
+      window.print();
     });
   }
 
