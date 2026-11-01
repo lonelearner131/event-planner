@@ -180,7 +180,7 @@ sequenceDiagram
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-username>/event-planner.git
+git clone https://github.com/lonelearner131/event-planner.git
 cd event-planner
 
 # 2. Create virtual environment
