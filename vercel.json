@@ -4,10 +4,32 @@
   "builds": [
     {
       "src": "app/main.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxDuration": 30,
+        "excludeFiles": "{tests/**,docs/**,*.md,*.cfg,requirements-dev.txt,.github/**,.ruff_cache/**,htmlcov/**,.pytest_cache/**}"
+      }
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self';",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()",
+        "Cross-Origin-Opener-Policy": "same-origin",
+        "Cross-Origin-Resource-Policy": "same-origin",
+        "X-XSS-Protection": "0"
+      },
+      "continue": true
+    },
     {
       "src": "/api/(.*)",
       "dest": "app/main.py"
@@ -25,51 +47,58 @@
       "dest": "/public/index.html"
     }
   ],
-  "headers": [
+  "env": {
+    "ENV": "production"
+  }
+}{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self';"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()"
-        },
-        {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
-        },
-        {
-          "key": "Cross-Origin-Resource-Policy",
-          "value": "same-origin"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "0"
-        }
-      ]
+      "src": "app/main.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxDuration": 30,
+        "excludeFiles": "{tests/**,docs/**,*.md,*.cfg,requirements-dev.txt,.github/**,.ruff_cache/**,htmlcov/**,.pytest_cache/**}"
+      }
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
-  "functions": {
-    "app/main.py": {
-      "maxDuration": 30,
-      "excludeFiles": "tests/**,docs/**,*.md,*.cfg,requirements-dev.txt,.github/**,.ruff_cache/**,htmlcov/**,.pytest_cache/**"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self';",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()",
+        "Cross-Origin-Opener-Policy": "same-origin",
+        "Cross-Origin-Resource-Policy": "same-origin",
+        "X-XSS-Protection": "0"
+      },
+      "continue": true
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "app/main.py"
+    },
+    {
+      "src": "/healthz",
+      "dest": "app/main.py"
+    },
+    {
+      "src": "/(styles\\.css|app\\.js|favicon\\.ico)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html"
     }
-  },
+  ],
   "env": {
     "ENV": "production"
   }
