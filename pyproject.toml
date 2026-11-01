@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "celebration-planner"
+version = "1.0.0"
+description = "GenAI-powered Celebration & Event Planner"
+requires-python = ">=3.11"
+
+# ---------------------------------------------------------------------------
+# Ruff — linter + formatter
+# ---------------------------------------------------------------------------
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["app", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "S",   # flake8-bandit (security)
+    "N",   # pep8-naming
+    "ANN", # flake8-annotations
+    "RUF", # ruff-specific rules
+    "SIM", # flake8-simplify
+    "PIE", # flake8-pie
+    "T20", # flake8-print
+]
+ignore = [
+    "B008",    # function call in argument defaults (standard FastAPI Depends)
+    "ANN401",  # dynamically typed Any (e.g. JSON loading)
+    "RUF001",  # ambiguous unicode punctuation (e.g. en-dash in copy)
+    "E501",    # line length (ruff format handles line breaks; prose strings may exceed 100)
+    "S101",    # use of assert (needed in tests)
+    "ANN002",  # missing type annotation for *args
+    "ANN003",  # missing type annotation for **kwargs
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "ANN", "T20", "S105", "S106", "S311", "RUF012", "F841", "B007"]
+"app/data/**" = ["ALL"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# ---------------------------------------------------------------------------
+# Pytest
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "--strict-markers -q"
+markers = [
+    "slow: marks tests as slow",
+    "integration: marks tests requiring a real API key",
+]
+
+# ---------------------------------------------------------------------------
+# Coverage
+# ---------------------------------------------------------------------------
+[tool.coverage.run]
+source = ["app"]
+omit = ["app/data/*", "app/__init__.py"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+skip_covered = false
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "@(abc\\.)?abstractmethod",
+]
