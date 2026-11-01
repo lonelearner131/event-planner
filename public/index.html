@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Celebration & Event Planner — AI-powered planning assistant for weddings, birthdays, and community events. Get budgets, timelines, vendor checklists, and personalised ideas." />
+  <title>Celebration &amp; Event Planner</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>" />
+</head>
+<body>
+  <!-- Skip navigation link for keyboard / screen reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-icon" aria-hidden="true">🎉</span>
+        <div>
+          <span class="brand-name">Celebration &amp; Event Planner</span>
+          <span class="brand-tagline">Smart planning, powered by AI</span>
+        </div>
+      </div>
+      <nav class="header-nav" aria-label="Page sections">
+        <a href="#plan-form">Plan</a>
+        <a href="#results-section" id="nav-results" aria-hidden="true">Results</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- ================================================================
+         HERO / INTRO SECTION
+    ================================================================ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <h1 id="hero-heading">Plan Your Perfect Celebration</h1>
+        <p class="hero-sub">
+          Tell us about your event and get an instant, personalised plan&nbsp;—
+          budget breakdown, timeline, vendor checklist, and AI-powered ideas.
+        </p>
+        <div class="preset-bar" role="group" aria-label="Quick-start presets">
+          <span class="preset-label">Try a sample:</span>
+          <button type="button" class="preset-btn" id="preset-wedding" data-preset="wedding">
+            💍 Wedding
+          </button>
+          <button type="button" class="preset-btn" id="preset-birthday" data-preset="birthday">
+            🎂 Birthday
+          </button>
+          <button type="button" class="preset-btn" id="preset-community" data-preset="community">
+            🏘️ Community Event
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         PLAN FORM
+    ================================================================ -->
+    <section id="plan-form" class="form-section" aria-labelledby="form-heading">
+      <div class="container">
+        <h2 id="form-heading">Your Event Details</h2>
+
+        <!-- Error summary — receives focus on validation failure -->
+        <div
+          id="error-summary"
+          class="error-summary"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          hidden
+        >
+          <h3>Please fix the following issues:</h3>
+          <ul id="error-list"></ul>
+        </div>
+
+        <form id="event-form" novalidate aria-labelledby="form-heading">
+
+          <!-- ---- Core Fields ---- -->
+          <fieldset class="fieldset-card">
+            <legend>Event Basics</legend>
+
+            <div class="form-row form-row--3">
+              <!-- Event type -->
+              <div class="field-group">
+                <label for="event_type" class="field-label">
+                  Event type <span class="required-mark" aria-label="required">*</span>
+                </label>
+                <select
+                  id="event_type"
+                  name="event_type"
+                  required
+                  aria-required="true"
+                  aria-describedby="event_type-hint"
+                  autocomplete="off"
+                >
+                  <option value="">Choose type…</option>
+                  <option value="wedding">💍 Wedding</option>
+                  <option value="birthday">🎂 Birthday</option>
+                  <option value="community">🏘️ Community Event</option>
+                </select>
+                <span id="event_type-hint" class="field-hint">What kind of celebration is this?</span>
+                <span id="event_type-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Event date -->
+              <div class="field-group">
+                <label for="event_date" class="field-label">
+                  Event date <span class="required-mark" aria-label="required">*</span>
+                </label>
+                <input
+                  type="date"
+                  id="event_date"
+                  name="event_date"
+                  required
+                  aria-required="true"
+                  aria-describedby="event_date-hint"
+                  autocomplete="off"
+                />
+                <span id="event_date-hint" class="field-hint">Must be in the future (up to 3 years ahead).</span>
+                <span id="event_date-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Guest count -->
+              <div class="field-group">
+                <label for="guest_count" class="field-label">
+                  Number of guests <span class="required-mark" aria-label="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  id="guest_count"
+                  name="guest_count"
+                  min="1"
+                  max="5000"
+                  step="1"
+                  required
+                  aria-required="true"
+                  aria-describedby="guest_count-hint"
+                  autocomplete="off"
+                  placeholder="e.g. 80"
+                />
+                <span id="guest_count-hint" class="field-hint">Between 1 and 5,000 guests.</span>
+                <span id="guest_count-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row form-row--3">
+              <!-- Total budget -->
+              <div class="field-group">
+                <label for="total_budget" class="field-label">
+                  Total budget <span class="required-mark" aria-label="required">*</span>
+                </label>
+                <input
+                  type="number"
+                  id="total_budget"
+                  name="total_budget"
+                  min="1"
+                  max="100000000"
+                  step="1"
+                  required
+                  aria-required="true"
+                  aria-describedby="total_budget-hint"
+                  autocomplete="off"
+                  placeholder="e.g. 15000"
+                />
+                <span id="total_budget-hint" class="field-hint">In the currency you select below (no commas).</span>
+                <span id="total_budget-error" class="field-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Currency -->
+              <div class="field-group">
+                <label for="currency" class="field-label">Currency</label>
+                <select id="currency" name="currency" autocomplete="off">
+                  <option value="USD">USD — US Dollar</option>
+                  <option value="EUR">EUR — Euro</option>
+                  <option value="GBP">GBP — British Pound</option>
+                  <option value="INR">INR — Indian Rupee</option>
+                </select>
+                <span id="currency-hint" class="field-hint">All amounts will be shown in this currency.</span>
+              </div>
+
+              <!-- Location type -->
+              <div class="field-group">
+                <label for="location_type" class="field-label">Venue location</label>
+                <select id="location_type" name="location_type" autocomplete="off">
+                  <option value="indoor">Indoor</option>
+                  <option value="outdoor">Outdoor</option>
+                  <option value="either">Either / TBD</option>
+                </select>
+                <span id="location_type-hint" class="field-hint">Outdoor events get weather-backup tasks and budget.</span>
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <!-- City/region -->
+              <div class="field-group">
+                <label for="city_region" class="field-label">City / region <span class="optional-mark">(optional)</span></label>
+                <input
+                  type="text"
+                  id="city_region"
+                  name="city_region"
+                  maxlength="80"
+                  autocomplete="off"
+                  placeholder="e.g. Mumbai, London, Chicago"
+                  aria-describedby="city_region-hint"
+                />
+                <span id="city_region-hint" class="field-hint">Helps tailor ideas to your area.</span>
+              </div>
+
+              <!-- DIY preference -->
+              <div class="field-group">
+                <label for="diy_preference" class="field-label">DIY involvement</label>
+                <select id="diy_preference" name="diy_preference" autocomplete="off" aria-describedby="diy_preference-hint">
+                  <option value="low">Low — hire professionals for everything</option>
+                  <option value="medium" selected>Medium — some DIY touches</option>
+                  <option value="high">High — do it yourself wherever possible</option>
+                </select>
+                <span id="diy_preference-hint" class="field-hint">Higher DIY reduces décor and stationery costs.</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ---- Personalisation ---- -->
+          <fieldset class="fieldset-card">
+            <legend>Personalisation</legend>
+
+            <!-- Theme / vibe -->
+            <div class="field-group">
+              <label for="theme_or_vibe" class="field-label">
+                Theme or vibe <span class="optional-mark">(optional)</span>
+              </label>
+              <input
+                type="text"
+                id="theme_or_vibe"
+                name="theme_or_vibe"
+                maxlength="200"
+                autocomplete="off"
+                placeholder="e.g. rustic boho, elegant black-tie, tropical fiesta…"
+                aria-describedby="theme_or_vibe-hint"
+              />
+              <span id="theme_or_vibe-hint" class="field-hint">Up to 200 characters. Guides AI theme suggestions.</span>
+            </div>
+
+            <!-- Priorities -->
+            <fieldset class="inner-fieldset">
+              <legend class="inner-legend">
+                Priorities <span class="optional-mark">(select up to 7)</span>
+              </legend>
+              <div class="checkbox-grid" role="group" aria-describedby="priorities-hint">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="priorities" value="food" />
+                  <span>🍽️ Food</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="priorities" value="music" />
+                  <span>🎵 Music</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="priorities" value="photography" />
+                  <span>📸 Photography</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="priorities" value="decor" />
+                  <span>✨ Décor</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="priorities" value="attire" />
+                  <span>👗 Attire</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="priorities" value="entertainment" />
+                  <span>🎭 Entertainment</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="priorities" value="guest_experience" />
+                  <span>⭐ Guest Experience</span>
+                </label>
+              </div>
+              <span id="priorities-hint" class="field-hint">Selected priorities receive a larger budget share.</span>
+            </fieldset>
+
+            <!-- Dietary needs -->
+            <fieldset class="inner-fieldset">
+              <legend class="inner-legend">
+                Dietary requirements <span class="optional-mark">(select all that apply)</span>
+              </legend>
+              <div class="checkbox-grid" role="group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="dietary_needs" value="vegetarian" />
+                  <span>🥗 Vegetarian</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="dietary_needs" value="vegan" />
+                  <span>🌱 Vegan</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="dietary_needs" value="halal" />
+                  <span>🥩 Halal</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="dietary_needs" value="kosher" />
+                  <span>✡️ Kosher</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="dietary_needs" value="gluten_free" />
+                  <span>🌾 Gluten-free</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="dietary_needs" value="nut_free" />
+                  <span>🥜 Nut-free</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="dietary_needs" value="dairy_free" />
+                  <span>🥛 Dairy-free</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-row form-row--2">
+              <!-- Dietary notes -->
+              <div class="field-group">
+                <label for="dietary_notes" class="field-label">
+                  Other dietary notes <span class="optional-mark">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  id="dietary_notes"
+                  name="dietary_notes"
+                  maxlength="200"
+                  autocomplete="off"
+                  placeholder="e.g. severe tree-nut allergy in 3 guests"
+                  aria-describedby="dietary_notes-hint"
+                />
+                <span id="dietary_notes-hint" class="field-hint">Any additional dietary details for the caterer.</span>
+              </div>
+
+              <!-- Cultural notes -->
+              <div class="field-group">
+                <label for="cultural_or_religious_notes" class="field-label">
+                  Cultural / religious notes <span class="optional-mark">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  id="cultural_or_religious_notes"
+                  name="cultural_or_religious_notes"
+                  maxlength="300"
+                  autocomplete="off"
+                  placeholder="e.g. Hindu ceremony, no alcohol, Shabbat restrictions"
+                  aria-describedby="cultural_notes-hint"
+                />
+                <span id="cultural_notes-hint" class="field-hint">Helps tailor ideas respectfully. Up to 300 characters.</span>
+              </div>
+            </div>
+
+            <!-- Toggles row -->
+            <div class="form-row form-row--2">
+              <div class="field-group">
+                <label class="toggle-label" for="has_children">
+                  <input type="checkbox" id="has_children" name="has_children" role="switch" aria-checked="false" />
+                  <span class="toggle-text">Children will be attending</span>
+                </label>
+                <span class="field-hint">Adds kids entertainment to vendor checklist and budget.</span>
+              </div>
+              <div class="field-group">
+                <label class="toggle-label" for="accessibility_needs">
+                  <input type="checkbox" id="accessibility_needs" name="accessibility_needs" role="switch" aria-checked="false" />
+                  <span class="toggle-text">Accessibility requirements</span>
+                </label>
+                <span class="field-hint">Adds accessibility audit task and dedicated budget line.</span>
+              </div>
+            </div>
+
+            <!-- Accessibility details (shown when needed) -->
+            <div class="field-group" id="accessibility_details-group" hidden>
+              <label for="accessibility_details" class="field-label">
+                Accessibility details <span class="optional-mark">(optional)</span>
+              </label>
+              <input
+                type="text"
+                id="accessibility_details"
+                name="accessibility_details"
+                maxlength="300"
+                autocomplete="off"
+                placeholder="e.g. wheelchair users, hearing loop required, BSL interpreter"
+                aria-describedby="accessibility_details-hint"
+              />
+              <span id="accessibility_details-hint" class="field-hint">Specific requirements to pass to the venue and caterer.</span>
+            </div>
+          </fieldset>
+
+          <!-- ---- Community-only fields (progressive disclosure) ---- -->
+          <fieldset
+            class="fieldset-card community-fields"
+            id="community-section"
+            hidden
+            aria-hidden="true"
+          >
+            <legend>Community Event Details</legend>
+            <div class="form-row form-row--3">
+              <div class="field-group">
+                <label class="toggle-label" for="is_public">
+                  <input type="checkbox" id="is_public" name="is_public" role="switch" aria-checked="false" />
+                  <span class="toggle-text">Public event (open to all)</span>
+                </label>
+                <span class="field-hint">Public events require permits and council notification.</span>
+              </div>
+              <div class="field-group">
+                <label class="toggle-label" for="ticketed">
+                  <input type="checkbox" id="ticketed" name="ticketed" role="switch" aria-checked="false" />
+                  <span class="toggle-text">Ticketed event</span>
+                </label>
+                <span class="field-hint">Adds ticketing platform setup to the timeline.</span>
+              </div>
+              <div class="field-group">
+                <label for="expected_volunteers" class="field-label">
+                  Expected volunteers
+                </label>
+                <input
+                  type="number"
+                  id="expected_volunteers"
+                  name="expected_volunteers"
+                  min="0"
+                  max="10000"
+                  step="1"
+                  autocomplete="off"
+                  placeholder="e.g. 20"
+                  aria-describedby="volunteers-hint"
+                />
+                <span id="volunteers-hint" class="field-hint">Adds volunteer recruitment to the timeline.</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- ---- Submit ---- -->
+          <div class="form-actions">
+            <button type="submit" id="submit-btn" class="btn btn--primary btn--large">
+              <span class="btn-icon" aria-hidden="true">✨</span>
+              Generate My Plan
+            </button>
+            <button type="button" id="reset-btn" class="btn btn--ghost">
+              Reset form
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         LOADING STATE
+    ================================================================ -->
+    <div
+      id="loading-overlay"
+      class="loading-overlay"
+      role="status"
+      aria-live="polite"
+      aria-busy="false"
+      aria-label="Generating your event plan"
+      hidden
+    >
+      <div class="loading-inner">
+        <div class="spinner" aria-hidden="true"></div>
+        <p class="loading-text">Crafting your personalised plan…</p>
+        <p class="loading-sub">Budget, timeline, and vendor checklist will appear instantly.</p>
+      </div>
+    </div>
+
+    <!-- ================================================================
+         RESULTS SECTION
+    ================================================================ -->
+    <section
+      id="results-section"
+      class="results-section"
+      hidden
+      aria-labelledby="results-heading"
+      aria-live="polite"
+      aria-atomic="false"
+    >
+      <div class="container">
+        <h2 id="results-heading" tabindex="-1">Your Event Plan</h2>
+
+        <!-- AI notice banner -->
+        <div id="ai-notice" class="notice notice--info" hidden role="status">
+          <span class="notice-icon" aria-hidden="true">ℹ️</span>
+          <span id="ai-notice-text"></span>
+        </div>
+
+        <!-- Warnings -->
+        <div id="warnings-panel" class="warnings-panel" hidden role="alert" aria-live="assertive">
+          <h3 class="warnings-heading">
+            <span aria-hidden="true">⚠️</span> Heads up
+          </h3>
+          <ul id="warnings-list" class="warnings-list"></ul>
+        </div>
+
+        <!-- Summary cards -->
+        <div class="summary-cards" role="region" aria-label="Event summary">
+          <div class="summary-card" id="card-total">
+            <div class="card-label">Total budget</div>
+            <div class="card-value" id="card-total-value">—</div>
+          </div>
+          <div class="summary-card" id="card-per-guest">
+            <div class="card-label">Per-guest cost</div>
+            <div class="card-value" id="card-per-guest-value">—</div>
+          </div>
+          <div class="summary-card" id="card-feasibility">
+            <div class="card-label">Budget rating</div>
+            <div class="card-value" id="card-feasibility-value">—</div>
+          </div>
+          <div class="summary-card" id="card-days">
+            <div class="card-label">Days to go</div>
+            <div class="card-value" id="card-days-value">—</div>
+          </div>
+        </div>
+
+        <!-- What-if controls -->
+        <div class="whatif-panel" role="region" aria-labelledby="whatif-heading">
+          <h3 id="whatif-heading" class="whatif-heading">
+            <span aria-hidden="true">🔄</span> What-if adjustments
+          </h3>
+          <p class="whatif-sub">Tweak the budget or guest count and recompute instantly.</p>
+          <div class="form-row form-row--2">
+            <div class="field-group">
+              <label for="whatif-budget" class="field-label">New budget</label>
+              <input type="number" id="whatif-budget" name="whatif_budget" min="1" step="1" aria-describedby="whatif-budget-hint" />
+              <span id="whatif-budget-hint" class="field-hint">Same currency as your original plan.</span>
+            </div>
+            <div class="field-group">
+              <label for="whatif-guests" class="field-label">New guest count</label>
+              <input type="number" id="whatif-guests" name="whatif_guests" min="1" max="5000" step="1" />
+            </div>
+          </div>
+          <button type="button" id="whatif-btn" class="btn btn--secondary">
+            <span aria-hidden="true">⚡</span> Recompute Plan
+          </button>
+        </div>
+
+        <!-- Export buttons -->
+        <div class="export-bar" role="group" aria-label="Export options">
+          <button type="button" id="export-ics-btn" class="btn btn--ghost">
+            <span aria-hidden="true">📅</span> Download Calendar (.ics)
+          </button>
+          <button type="button" id="export-csv-btn" class="btn btn--ghost">
+            <span aria-hidden="true">📊</span> Download Spreadsheet (.csv)
+          </button>
+          <button type="button" id="print-btn" class="btn btn--ghost" onclick="window.print()">
+            <span aria-hidden="true">🖨️</span> Print Plan
+          </button>
+        </div>
+
+        <!-- ---- Budget section ---- -->
+        <section id="budget-section" class="result-card" aria-labelledby="budget-heading">
+          <h3 id="budget-heading">Budget Breakdown</h3>
+
+          <div class="feasibility-badge" id="feasibility-badge" aria-live="polite"></div>
+          <p id="feasibility-explanation" class="feasibility-explanation"></p>
+
+          <!-- Accessible table — source of truth -->
+          <div class="table-wrapper" role="region" aria-labelledby="budget-heading" tabindex="0">
+            <table id="budget-table" class="budget-table">
+              <caption>Budget allocation by category</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Percent</th>
+                  <th scope="col">Visual</th>
+                  <th scope="col">Saving tip</th>
+                </tr>
+              </thead>
+              <tbody id="budget-tbody"></tbody>
+              <tfoot>
+                <tr class="budget-total-row">
+                  <th scope="row">Total</th>
+                  <td id="budget-total-cell" colspan="2"></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- Suggestions -->
+          <div id="suggestions-panel" class="suggestions-panel" hidden>
+            <h4>💡 How to make this budget work harder</h4>
+            <ul id="suggestions-list"></ul>
+          </div>
+        </section>
+
+        <!-- ---- Timeline section ---- -->
+        <section id="timeline-section" class="result-card" aria-labelledby="timeline-heading">
+          <h3 id="timeline-heading">Event Timeline</h3>
+          <p id="timeline-meta" class="timeline-meta" aria-live="polite"></p>
+
+          <div id="timeline-phases" class="timeline-phases"></div>
+        </section>
+
+        <!-- ---- Vendors section ---- -->
+        <section id="vendors-section" class="result-card" aria-labelledby="vendors-heading">
+          <h3 id="vendors-heading">Vendor Checklist</h3>
+
+          <div class="checklist-progress-wrap">
+            <label for="checklist-progress" id="progress-label">
+              Booked: <span id="progress-booked">0</span> of <span id="progress-total">0</span>
+            </label>
+            <progress
+              id="checklist-progress"
+              aria-labelledby="progress-label"
+              max="100"
+              value="0"
+            ></progress>
+          </div>
+
+          <div id="vendor-list" class="vendor-list"></div>
+        </section>
+
+        <!-- ---- Ideas section ---- -->
+        <section id="ideas-section" class="result-card" aria-labelledby="ideas-heading">
+          <h3 id="ideas-heading">Personalised Ideas</h3>
+
+          <div
+            id="ideas-loading"
+            class="ideas-loading"
+            role="status"
+            aria-live="polite"
+            aria-busy="false"
+            aria-label="Loading personalised ideas"
+          >
+            <div class="spinner spinner--small" aria-hidden="true"></div>
+            <p>Loading personalised ideas…</p>
+          </div>
+
+          <div id="ideas-content" class="ideas-content" hidden aria-live="polite"></div>
+        </section>
+
+      </div><!-- /container -->
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>
+        <strong>Celebration &amp; Event Planner</strong> — AI-assisted planning.
+        All suggestions are advisory. Please verify vendor details and costs independently.
+        No personal data is stored by this application.
+      </p>
+      <p class="footer-version">v1.0.0 &middot; Built for Virtual PromptWars Challenge 5</p>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
